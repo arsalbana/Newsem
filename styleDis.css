@@ -110,7 +110,7 @@ body {
 
     .card {
       width: 18rem;
-      height: 28rem;
+      height: auto;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -122,7 +122,7 @@ body {
     }
     .cardCentro {
       width: 18rem;
-      height: 28rem;
+      height: auto;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -182,7 +182,7 @@ body {
 
     .card3 {
         width: 16rem;
-      height: 7rem;
+      height: auto;
       margin: .5rem;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -196,12 +196,13 @@ body {
       grid-template-columns: repeat(2, 2fr);
         gap: 1rem;
         background-color: #fff;
+        padding: .5rem;
         
     }
     
     .card4 {
         width: 16rem;
-      height: 7rem;
+      height: auto;
       margin: .5rem;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -211,13 +212,14 @@ body {
       align-items: center;
       cursor: pointer;
       display: grid;
-      grid-template-columns: repeat(2, 2fr);
+      grid-template-columns: repeat(3, 2fr);
         gap: 1rem;
+        padding: .5rem;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .card5 {
         width: 16rem;
-      height: 7rem;
+      height: auto;
       margin: .5rem;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -267,24 +269,35 @@ body {
     img {
         width: 1rem;
     }
-    .dash2 {
-    display: flex;
-    flex-direction: column;       
-    align-items: center;         
-    justify-content: center;     
-    width: 80px;                
-    height: 80px;                
-    padding: 0 1rem;             
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: #333;
-    background-color: #fff;
-    transition: background 0.2s;
-    }
+  .dash2 {
+  display: flex;
+  flex-direction: column;   /* Imagen arriba, texto abajo */
+  align-items: center;
+  justify-content: center;
+  gap: 4px;                 /* Espacio entre imagen y texto */
+  width: 60px;              /* Un poco más grande que 60px */
+  height: 80px;
+  padding: 6px;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;          /* Texto más chico */
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  transition: background 0.2s;
+}
+
+.dash2 img,
+.dash2 svg {
+  width: 24px;                 /* Imagen chica */
+  height: 24px;
+  object-fit: contain;
+}
+
+
+
     
     .dash2:hover {
     background-color: #8ab7ce;
@@ -298,13 +311,44 @@ body {
     .card img {
       width: 80%;
       height: auto;
-      margin-bottom: 1rem;
-    }
+      margin: 0;
+      justify-content: center;
+      align-self: center;
 
+      
+    }
+    .card5 img {
+  width: 24px;                 /* Imagen chica */
+  height: 24px;
+  object-fit: contain;
+  
+  
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem;
+}
+.card5 {
+  display: flex;
+  flex-direction: row;
+  
+}
     .card p {
       font-weight: 500;
       font-size: 0.95rem;
     }
+    .card5 p {
+      font-size: 12px;
+  margin: 0;
+  text-align: center;
+    }
+    .dash2 p {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
     .principal {
         display: flex;
         flex-direction: row;
