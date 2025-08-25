@@ -1,0 +1,414 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  color: #333;
+  background: #fff;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+   
+
+    /* Sidebar */
+    .sidebar {
+        
+         
+      width: 60px;
+      background: #ffffff;
+      border-right: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1.5rem;
+      height: 100vh;
+       
+    }
+    .sidebar .vacio {
+        height: 30px;
+    }
+    .sidebar button {
+      background: #fff;
+      border: transparent;
+      border-radius: 50%;
+      width: 52px;
+      height:52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar button:hover svg path {
+      background: #E9F3F8;
+      transform: scale(1.05);
+      
+    }
+
+    .sidebar svg {
+      width: 64px;
+      height: 64px;
+     
+    }
+
+    /* Contenido principal */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      
+    }
+
+    header .logo {
+        
+        height: auto;
+        display: flex;
+        
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #015E8D;
+    }
+   
+    header img {
+      width: 80%;
+      height: auto;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 2rem;
+      width: 100%;
+       flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container h2 {
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .card {
+      width: 18rem;
+      height: 28rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cardCentro {
+      width: 18rem;
+      height: 28rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    select {
+        border: none;          
+        outline: none;         
+        box-shadow: none;      
+        font-family: Montserrat, sans-serif;
+        font-size: small;
+        background: transparent; 
+        text-align: center;
+        width: 16rem;
+        height: 2rem;
+
+        }
+
+        select:hover,
+        select:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        }
+    option {
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .card22 {
+        width: 16rem;
+      height: 1rem;
+      margin: .5rem;
+      border: transparent;
+        outline: none;
+        box-shadow: none;
+    }
+    .carda {
+        width: 16rem;
+      height: 20rem;
+      margin: .5rem;
+      
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card3 {
+        width: 16rem;
+      height: 7rem;
+      margin: .5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+        gap: 1rem;
+        background-color: #fff;
+        
+    }
+    
+    .card4 {
+        width: 16rem;
+      height: 7rem;
+      margin: .5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+        gap: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card5 {
+        width: 16rem;
+      height: 7rem;
+      margin: .5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    div.carda p {
+        text-align: center;
+        margin: .5rem;    
+    }
+    div.card1 p {
+        text-align: center;
+        margin: .5rem;    
+    }
+    
+    .card1 {
+      width: 16rem;
+      height: 2rem;
+      margin: .5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card2 {
+      width: 14rem;
+      height: 2rem;
+      margin: .5rem;
+      border: 1px solid #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    img {
+        width: 1rem;
+    }
+    .dash2 {
+    display: flex;
+    flex-direction: column;       
+    align-items: center;         
+    justify-content: center;     
+    width: 80px;                
+    height: 80px;                
+    padding: 0 1rem;             
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    transition: background 0.2s;
+    }
+    
+    .dash2:hover {
+    background-color: #8ab7ce;
+    }
+   
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .principal {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Responsive */
+    @media (max-width: 834px) {
+      body {
+        flex-direction: column;
+      }
+      h2 {
+        font-size: medium;
+      }
+      header .logo {
+        width: 30%;
+        height: auto;
+        max-width: 150px;
+        min-width: 125px;
+      }
+       .sidebar {
+        width: 48px;
+        background: #ffffff;
+        border-right: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        height: 100vh;
+        
+    }
+    .sidebar .vacio {
+        height: 30px;
+    }
+    .sidebar button {
+      background: #fff;
+      border: transparent;
+      border-radius: 50%;
+      width: 42px;
+      height:42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar button:hover svg path {
+      background: #E9F3F8;
+      transform: scale(1.05);
+      
+    }
+
+    .sidebar svg {
+      width: 32px;
+      height: 32px;
+     
+    }
+      
+      .header {
+        margin-left: 0rem;
+      }
+      
+      .main {
+        margin-top: 1rem;
+      }
+      .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto;  
+        gap: 2rem; 
+        justify-content: center; 
+    }
+
+     
+    .card {
+      width: 150px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1rem;
+    }
+    }
+     @media (max-width: 450px) {
+        
+    .card {
+      width: 100px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1rem;
+    }
+     }

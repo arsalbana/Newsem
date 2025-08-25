@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsem</title>
+
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+      display: flex;
+      
+    }
+
+    /* Sidebar */
+    .sidebar {
+        
+        
+      width: 60px;
+      background: #ffffff;
+      border-right: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1.5rem;
+      height: 100vh;
+       
+    }
+    .sidebar .vacio {
+        height: 30px;
+    }
+    .sidebar button {
+      background: #fff;
+      border: transparent;
+      border-radius: 50%;
+      width: 52px;
+      height:52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar button:hover svg path {
+      background: #E9F3F8;
+      transform: scale(1.05);
+      
+    }
+
+    .sidebar svg {
+      width: 64px;
+      height: 64px;
+     
+    }
+
+    /* Contenido principal */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      
+    }
+
+    header .logo {
+        
+        height: auto;
+        display: flex;
+        
+        gap: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #015E8D;
+    }
+   
+    header img {
+      width: 80%;
+      height: auto;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 2rem;
+       flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container h2 {
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .card {
+      width: 200px;
+      height: 250px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .principal {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Responsive */
+    @media (max-width: 834px) {
+      body {
+        flex-direction: column;
+      }
+      h2 {
+        font-size: medium;
+      }
+      header .logo {
+        width: 30%;
+        height: auto;
+        max-width: 150px;
+        min-width: 125px;
+      }
+       .sidebar {
+        width: 48px;
+        background: #ffffff;
+        border-right: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        height: 100vh;
+        
+    }
+    .sidebar .vacio {
+        height: 30px;
+    }
+    .sidebar button {
+      background: #fff;
+      border: transparent;
+      border-radius: 50%;
+      width: 42px;
+      height:42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .sidebar button:hover svg path {
+      background: #E9F3F8;
+      transform: scale(1.05);
+      
+    }
+
+    .sidebar svg {
+      width: 32px;
+      height: 32px;
+     
+    }
+      
+      .header {
+        margin-left: 0rem;
+      }
+      
+      .main {
+        margin-top: 1rem;
+      }
+      .options {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+      }
+     
+
+    .card {
+      width: 150px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1rem;
+    }
+    }
+     @media (max-width: 450px) {
+        
+    .card {
+      width: 100px;
+      height: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      padding: 1rem;
+    }
+     }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Contenido principal -->
+  <div class="main">
+    <header>
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo">
+        
+      </div>
+      <div class="user">
+        <img src="../assets/icono-usuario.png" alt="Usuario" style="width:32px; height:32px;">
+      </div>
+    </header>
+
+    <div class="principal">
+        <div class="sidebar">
+    <div class="vacio"></div>
+    <button><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_103_9417)">
+        <path d="M32 56C47.464 56 60 43.464 60 28C60 12.536 47.464 0 32 0C16.536 0 4 12.536 4 28C4 43.464 16.536 56 32 56Z" fill="white"/>
+        </g>
+        <path d="M41.25 25.0625V39.0781C41.25 39.4782 41.1712 39.8745 41.0181 40.2441C40.8649 40.6138 40.6405 40.9497 40.3576 41.2326C40.0747 41.5155 39.7388 41.7399 39.3691 41.8931C38.9995 42.0462 38.6032 42.125 38.2031 42.125H19.9219C19.1138 42.125 18.3388 41.804 17.7674 41.2326C17.196 40.6612 16.875 39.8862 16.875 39.0781V20.7969C16.875 19.9888 17.196 19.2138 17.7674 18.6424C18.3388 18.071 19.1138 17.75 19.9219 17.75H32.6791" stroke="#015E8D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M47.0346 12.0562C46.9233 11.9339 46.7883 11.8354 46.6379 11.7667C46.4875 11.6981 46.3247 11.6606 46.1594 11.6566C45.994 11.6526 45.8296 11.6822 45.6761 11.7435C45.5225 11.8049 45.3829 11.8967 45.2659 12.0135L44.3236 12.9512C44.2094 13.0655 44.1453 13.2204 44.1453 13.3819C44.1453 13.5435 44.2094 13.6984 44.3236 13.8127L45.1874 14.675C45.244 14.7319 45.3113 14.777 45.3855 14.8078C45.4596 14.8386 45.539 14.8544 45.6193 14.8544C45.6996 14.8544 45.779 14.8386 45.8532 14.8078C45.9273 14.777 45.9946 14.7319 46.0512 14.675L46.9698 13.7609C47.4345 13.297 47.4779 12.5414 47.0346 12.0562ZM42.4186 14.8555L28.668 28.5817C28.5847 28.6647 28.5241 28.7678 28.4921 28.881L27.856 30.7754C27.8408 30.8268 27.8397 30.8814 27.8529 30.9333C27.8661 30.9853 27.8931 31.0327 27.931 31.0707C27.9689 31.1086 28.0163 31.1355 28.0683 31.1487C28.1203 31.1619 28.1748 31.1608 28.2262 31.1456L30.1191 30.5096C30.2323 30.4776 30.3354 30.417 30.4185 30.3336L44.1446 16.5815C44.2716 16.4532 44.3428 16.2799 44.3428 16.0994C44.3428 15.9188 44.2716 15.7456 44.1446 15.6172L43.3867 14.8555C43.2582 14.7273 43.0841 14.6554 42.9026 14.6554C42.7212 14.6554 42.5471 14.7273 42.4186 14.8555Z" fill="#015E8D"/>
+        <defs>
+        <filter id="filter0_d_103_9417" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_9417"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_103_9417" result="shape"/>
+        </filter>
+        </defs>
+        </svg></button>
+            <button><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_103_9423)">
+        <path d="M32 56C47.464 56 60 43.464 60 28C60 12.536 47.464 0 32 0C16.536 0 4 12.536 4 28C4 43.464 16.536 56 32 56Z" fill="white"/>
+        </g>
+        <path d="M20.125 19.375H25V16.125L28.25 12.875H33.125L36.375 16.125V19.375H41.25C42.5429 19.375 43.7829 19.8886 44.6971 20.8029C45.6114 21.7171 46.125 22.9571 46.125 24.25V37.25C46.125 38.5429 45.6114 39.7829 44.6971 40.6971C43.7829 41.6114 42.5429 42.125 41.25 42.125H20.125C18.8321 42.125 17.5921 41.6114 16.6779 40.6971C15.7636 39.7829 15.25 38.5429 15.25 37.25V24.25C15.25 22.9571 15.7636 21.7171 16.6779 20.8029C17.5921 19.8886 18.8321 19.375 20.125 19.375ZM28.9162 14.5L26.625 16.7912V19.375H34.75V16.7912L32.4588 14.5H28.9162ZM20.125 21C19.263 21 18.4364 21.3424 17.8269 21.9519C17.2174 22.5614 16.875 23.388 16.875 24.25V37.25C16.875 38.112 17.2174 38.9386 17.8269 39.5481C18.4364 40.1576 19.263 40.5 20.125 40.5H41.25C42.112 40.5 42.9386 40.1576 43.5481 39.5481C44.1576 38.9386 44.5 38.112 44.5 37.25V24.25C44.5 23.388 44.1576 22.5614 43.5481 21.9519C42.9386 21.3424 42.112 21 41.25 21H20.125Z" fill="#015E8D"/>
+        <defs>
+        <filter id="filter0_d_103_9423" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_9423"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_103_9423" result="shape"/>
+        </filter>
+        </defs>
+        </svg></button>
+            <button><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_103_9428)">
+        <path d="M32 56C47.464 56 60 43.464 60 28C60 12.536 47.464 0 32 0C16.536 0 4 12.536 4 28C4 43.464 16.536 56 32 56Z" fill="white"/>
+        </g>
+        <path d="M29.0623 11.4375L28.7681 12.3199C28.4802 13.1836 28.0895 14.0096 27.6046 14.7801C26.9541 15.8058 26.0649 16.6586 25.0131 17.2659C23.9612 17.8732 22.778 18.2168 21.5645 18.2674C20.6554 18.3018 19.7454 18.2271 18.854 18.0447L17.9424 17.8579L15.5049 22.0796L16.1224 22.7767C16.7301 23.4625 17.2485 24.2133 17.671 25.0128C18.2339 26.089 18.528 27.2855 18.528 28.5C18.528 29.7145 18.2339 30.911 17.671 31.9872C17.2461 32.7918 16.7262 33.5425 16.1224 34.2233L15.5049 34.9204L17.9424 39.1421L18.8524 38.9553C19.7448 38.7727 20.6559 38.6979 21.5661 38.7326C22.7794 38.7835 23.9622 39.1272 25.0138 39.7344C26.0653 40.3417 26.9542 41.1945 27.6046 42.2199C28.0856 42.9836 28.4773 43.8108 28.7681 44.6801L29.0623 45.5625H33.9373L34.2314 44.6801C34.5239 43.807 34.9117 42.9869 35.3949 42.2199C36.0454 41.1942 36.9346 40.3414 37.9865 39.7341C39.0383 39.1268 40.2215 38.7832 41.435 38.7326C42.3442 38.6982 43.2542 38.7729 44.1455 38.9553L45.0571 39.1421L47.4946 34.9204L46.8771 34.2233C46.2734 33.5425 45.7534 32.7918 45.3285 31.9872C44.7656 30.911 44.4715 29.7145 44.4715 28.5C44.4715 27.2855 44.7656 26.089 45.3285 25.0128C45.751 24.2133 46.2694 23.4625 46.8771 22.7767L47.4946 22.0796L45.0571 17.8579L44.1471 18.0447C43.2547 18.2273 42.3436 18.3021 41.4334 18.2674C40.2202 18.2165 39.0373 17.8728 37.9857 17.2655C36.9342 16.6583 36.0453 15.8055 35.3949 14.7801C34.91 14.0096 34.5194 13.1836 34.2314 12.3199L33.9373 11.4375H29.0623Z" stroke="#015E8D" stroke-width="1.5"/>
+        <path d="M37.1901 28.5003C37.1901 30.0096 36.5905 31.4571 35.5233 32.5243C34.4561 33.5915 33.0086 34.1911 31.4993 34.1911C29.9901 34.1911 28.5426 33.5915 27.4754 32.5243C26.4082 31.4571 25.8086 30.0096 25.8086 28.5003C25.8086 26.991 26.4082 25.5436 27.4754 24.4764C28.5426 23.4091 29.9901 22.8096 31.4993 22.8096C33.0086 22.8096 34.4561 23.4091 35.5233 24.4764C36.5905 25.5436 37.1901 26.991 37.1901 28.5003Z" stroke="#015E8D" stroke-width="1.5"/>
+        <defs>
+        <filter id="filter0_d_103_9428" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_9428"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_103_9428" result="shape"/>
+        </filter>
+        </defs>
+        </svg></button>
+  </div>
+
+    <div class="container">
+      <h2>Selecciona una opción para diseñar</h2>
+      <div class="options">
+        <div class="card">
+            <p>Plantilla vacía</p>
+          <img src="plantilla-vacia.png" alt="">
+          
+        </div>
+        <div class="card">
+            <p>Plantilla pre-diseñada</p>
+          <img src="plantilla-pre.png" alt="">
+          
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Sidebar -->
+  
+  </div>
+</body>
+</html>
